@@ -22,11 +22,10 @@ A simple Streamlit web app that turns text prompts into images using the OpenAI 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/image-gen.git
+git clone https://github.com/geeranlone/image-gen.git
 cd image-gen
 ```
 
-Replace `YOUR-USERNAME` with your GitHub username.
 
 ### 2. Create and activate a virtual environment
 
