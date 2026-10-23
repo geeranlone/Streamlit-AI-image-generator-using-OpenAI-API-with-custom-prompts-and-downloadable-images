@@ -81,29 +81,6 @@ streamlit run app.py
 ```
 
 Streamlit will print a local URL, usually `http://localhost:8501`.
-
-## GitHub upload
-
-Create a new, empty repository on GitHub named `image-gen`. Do not add a README or license on GitHub if you already have these files locally. Then run these commands from the project folder:
-
-```bash
-git init
-git add .
-git status
-git commit -m "Build Streamlit OpenAI image generator"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/image-gen.git
-git push -u origin main
-```
-
-Replace the remote URL with your actual repository URL. Before committing, inspect `git status` and confirm `.env` is not listed.
-
-If Git says the remote `origin` already exists, update it with:
-
-```bash
-git remote set-url origin https://github.com/geeranlone/image-gen.git
-```
-
 ## Deploy with Streamlit Community Cloud
 
 1. Push the project to GitHub.
@@ -119,25 +96,3 @@ OPENAI_API_KEY = "use urs"
 
 Availability, model access, and API pricing are controlled by OpenAI and may change. Check the current OpenAI documentation if a model or setting is rejected.
 
-## Project structure
-
-```text
-image-gen/
-├── app.py
-├── requirements.txt
-├── .env.example
-├── .gitignore
-├── LICENSE
-└── README.md
-```
-
-## Troubleshooting
-
-- **API key missing:** check that `.env` exists locally and contains `OPENAI_API_KEY=...`, or configure Streamlit secrets when deployed.
-- **Authentication or quota error:** verify the key, account access, billing and usage limits.
-- **Model or image-size error:** confirm the chosen model supports the selected size and quality in the current API documentation.
-- **Dependency/import error:** activate your virtual environment and run `pip install -r requirements.txt`.
-
-## Disclaimer
-
-This is a learning/demo project. Generated images and API usage may incur charges. Review OpenAI's current terms, image policies and pricing before use.
